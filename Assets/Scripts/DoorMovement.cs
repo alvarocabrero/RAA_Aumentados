@@ -20,6 +20,10 @@ public class DoorMovement : MonoBehaviour {
     float currentRotationAngle;
     float openTime = 0;
 
+    //Audio
+    public AudioSource AbrirPuerta;
+    public AudioSource CerrarPuerta;
+
     void Start()
     {
         defaultRotationAngle = transform.localEulerAngles.y;
@@ -42,7 +46,8 @@ public class DoorMovement : MonoBehaviour {
             open = !open;
             currentRotationAngle = transform.localEulerAngles.y;
             openTime = 0;
-            // Reporudcir aquí sonido de puerta abriéndose
+            // Reproducir aquí sonido de puerta abriéndose
+            AbrirPuerta.Play();
         }
 
         // Para abrir con el teclado
@@ -51,7 +56,8 @@ public class DoorMovement : MonoBehaviour {
             open = !open;
             currentRotationAngle = transform.localEulerAngles.y;
             openTime = 0;
-            // Reporudcir aquí sonido de puerta abriéndose
+            // Reproducir aquí sonido de puerta abriéndose
+            AbrirPuerta.Play();
         }
     }
 

@@ -26,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCamera;
     private Vector3 camForward;
     private Vector3 camRight;
+
+    //Audio
+    public AudioSource Caminando;
     
 
     // Start is called before the first frame update
@@ -52,6 +55,10 @@ public class PlayerMovement : MonoBehaviour
 
         SetGravity();
         player.Move(movePlayer);
+
+        // Reproducir aquí sonido de jugador caminando
+        Caminando.Play();
+
     }
 
     void SetGravity() {

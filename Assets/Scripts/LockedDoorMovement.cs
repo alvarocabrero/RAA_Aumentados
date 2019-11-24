@@ -23,6 +23,10 @@ public class LockedDoorMovement : MonoBehaviour
 
     public static bool hasKey = false;
 
+    //Audio
+    public AudioSource AbrirPuerta;
+    public AudioSource CerrarPuerta;
+
     void Start()
     {
         defaultRotationAngle = transform.localEulerAngles.y;
@@ -46,9 +50,11 @@ public class LockedDoorMovement : MonoBehaviour
                 open = !open;
                 currentRotationAngle = transform.localEulerAngles.y;
                 openTime = 0;
-                // Reporudcir aquí sonido de puerta abriéndose
+                // Reproducir aquí sonido de puerta abriéndose
+                AbrirPuerta.Play();
             } else {
                 //Reproducir sonido de puerta bloqueada
+                CerrarPuerta.Play();
             }
         }
 
@@ -59,9 +65,11 @@ public class LockedDoorMovement : MonoBehaviour
                 open = !open;
                 currentRotationAngle = transform.localEulerAngles.y;
                 openTime = 0;
-                // Reporudcir aquí sonido de puerta abriéndose
+                // Reproducir aquí sonido de puerta abriéndose
+                AbrirPuerta.Play();
             } else {
                 //Reproducir sonido de puerta bloqueada
+                CerrarPuerta.Play();
             }
         }
     }
