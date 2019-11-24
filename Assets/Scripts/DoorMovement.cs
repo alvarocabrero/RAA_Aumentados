@@ -20,6 +20,10 @@ public class DoorMovement : MonoBehaviour {
     float currentRotationAngle;
     float openTime = 0;
 
+    //Audios
+    public AudioSource AbrirPuerta;
+    public AudioSource CerrarPuerta;
+
     void Start()
     {
         defaultRotationAngle = transform.localEulerAngles.y;

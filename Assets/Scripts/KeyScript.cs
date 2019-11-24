@@ -13,6 +13,9 @@ public class KeyScript : MonoBehaviour
     private bool enter = false;
     Renderer renderer;
 
+    //Audios
+    public AudioSource Llaves;
+
     // Start is called before the first frame update
     void Start()
     {

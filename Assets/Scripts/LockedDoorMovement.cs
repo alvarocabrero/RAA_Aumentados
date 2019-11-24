@@ -23,6 +23,10 @@ public class LockedDoorMovement : MonoBehaviour
 
     public static bool hasKey = false;
 
+    //Audios
+    public AudioSource AbrirPuerta;
+    public AudioSource CerrarPuerta;
+
     void Start()
     {
         defaultRotationAngle = transform.localEulerAngles.y;
