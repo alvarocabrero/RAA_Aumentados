@@ -47,6 +47,7 @@ public class DoorMovement : MonoBehaviour {
             currentRotationAngle = transform.localEulerAngles.y;
             openTime = 0;
             // Reporudcir aquí sonido de puerta abriéndose
+            AbrirPuerta.Play();
         }
 
         // Para abrir con el teclado
@@ -56,6 +57,7 @@ public class DoorMovement : MonoBehaviour {
             currentRotationAngle = transform.localEulerAngles.y;
             openTime = 0;
             // Reporudcir aquí sonido de puerta abriéndose
+            AbrirPuerta.Play();
         }
     }
 

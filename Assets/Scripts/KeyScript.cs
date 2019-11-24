@@ -31,6 +31,9 @@ public class KeyScript : MonoBehaviour
         {
             LockedDoorMovement.hasKey = true;
             renderer.enabled = false;
+
+            //Sonido de las llaves
+            Llaves.Play();
         }
     }
 
