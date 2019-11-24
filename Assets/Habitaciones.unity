@@ -1763,6 +1763,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stretcher
       objectReference: {fileID: 0}
+    - target: {fileID: 143668, guid: 381bdf9c7f27cce46b2699033a9b735a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 143668, guid: 381bdf9c7f27cce46b2699033a9b735a, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 412390, guid: 381bdf9c7f27cce46b2699033a9b735a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.3
@@ -4310,7 +4318,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919063324}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cc0470e0c8dce548800d865248f376d, type: 3}
   m_Name: 
@@ -4328,7 +4336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d18678c26940843a088ee8b45a3590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeForNewPath: 10
+  timeForNewPath: 7
 --- !u!1001 &1943156880
 PrefabInstance:
   m_ObjectHideFlags: 0
