@@ -645,10 +645,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: e078b436-acb0-4c43-b130-44212e037c85
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: MapaTerror
+  organizationId: kingkai97
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
