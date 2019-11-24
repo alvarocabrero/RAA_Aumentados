@@ -23,7 +23,7 @@ public class LockedDoorMovement : MonoBehaviour
 
     public static bool hasKey = false;
 
-    //Audio
+    //Audios
     public AudioSource AbrirPuerta;
     public AudioSource CerrarPuerta;
 

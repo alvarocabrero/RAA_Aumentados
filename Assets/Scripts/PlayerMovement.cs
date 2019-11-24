@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 camForward;
     private Vector3 camRight;
 
-    //Audio
+    //Audios
     public AudioSource Caminando;
     
 
@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Reproducir aquí sonido de jugador caminando
         Caminando.Play();
+
 
     }
 

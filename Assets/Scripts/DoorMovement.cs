@@ -20,7 +20,7 @@ public class DoorMovement : MonoBehaviour {
     float currentRotationAngle;
     float openTime = 0;
 
-    //Audio
+    //Audios
     public AudioSource AbrirPuerta;
     public AudioSource CerrarPuerta;
 
