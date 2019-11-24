@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+   //Obtiene una posición aleatoria nueva en el mapa
     Vector3 getNewRandomPosition()
     {
         float x = Random.Range(-100,100);
@@ -37,6 +38,7 @@ public class Movement : MonoBehaviour
         GetNewPath();
         validPath = navMeshAgent.CalculatePath(target,path);
 
+        //Si la posición no es válida calcula una nueva
         while(!validPath)
         {
             yield return new WaitForSeconds(0.01f);
@@ -51,6 +53,7 @@ public class Movement : MonoBehaviour
         anim.SetBool("isIdle",false);
         anim.SetBool("isAttacking",false);
         anim.SetBool("isWalking",true);
+
         target = getNewRandomPosition();
         navMeshAgent.SetDestination(target);
     }
@@ -58,6 +61,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Si acaba el movimiento empieza de nuevo a buscar una posición aleatoria
         if(!inCoRoutine)
         {
         StartCoroutine(Move());

@@ -36,6 +36,7 @@ public class Chase : MonoBehaviour
                 anim.SetBool("isWalking",true);
                 anim.SetBool("isAttacking",false);
              }
+             //Si el jugador no está cerca del monstruo este se queda quieto
              else
              {
                 anim.SetBool("isAttacking",true);
