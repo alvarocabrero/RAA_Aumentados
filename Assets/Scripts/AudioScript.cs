@@ -6,9 +6,9 @@ public class AudioScript : MonoBehaviour
 {   
     //Audio
     public AudioClip MusicClip;
-
     public AudioSource MusicSource;
 
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +16,5 @@ public class AudioScript : MonoBehaviour
         MusicSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.Space))
-            //MusicSource.Play();
-    }
+
 }
