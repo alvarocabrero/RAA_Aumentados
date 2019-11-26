@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MapaDefinitivo.unity
+    guid: 4f8f75772c63f00438a4efb904d20372
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: 2a7816dbaa2b8ef469efe22f364d1413
   m_configObjects: {}
