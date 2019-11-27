@@ -10242,7 +10242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c417dbded6978954baeb06833234770f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GhostApp: {fileID: 0}
 --- !u!4 &676038601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3281678466524414941, guid: d6491f9eb71c6a94c811f8072113c519,
@@ -24153,7 +24152,7 @@ MonoBehaviour:
   speed: 3
   gravity: 300
   mainCamera: {fileID: 1794170826}
-  Caminando: {fileID: 0}
+  Caminando: {fileID: 1239671932}
 --- !u!64 &1607677785
 MeshCollider:
   m_ObjectHideFlags: 0
