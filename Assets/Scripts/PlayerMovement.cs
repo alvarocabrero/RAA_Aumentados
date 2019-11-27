@@ -57,9 +57,22 @@ public class PlayerMovement : MonoBehaviour
         player.Move(movePlayer);
 
         // Reproducir aquí sonido de jugador caminando
+        PlayCaminando();
+        OnTriggerEnter();
+
+
+
+
+    }
+
+    public void PlayCaminando()
+    {
         Caminando.Play();
+    }
 
-
+    void OnTriggerEnter()
+    {
+        Caminando.Play();
     }
 
     void SetGravity() {
