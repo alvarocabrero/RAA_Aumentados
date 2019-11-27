@@ -18,10 +18,18 @@ public class matar : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "Skeleton")
+        if (col.gameObject.name == "aa")
         {
             Destroy(col.gameObject);
 
         }
     }
+     void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "aa")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+   
 }
