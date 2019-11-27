@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chase : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
     static Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -15,11 +15,11 @@ public class Chase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = player.position - this.transform.position;
+        Vector3 direction = player.transform.position - this.transform.position;
         float angle = Vector3.Angle(direction,this.transform.forward);
 
         //Si el jugador está a menos de 50 de distancia y en el ángulo de vision del monstruo este se mueve hacia él
-        if(Vector3.Distance(player.position, this.transform.position) < 50 && angle < 60)
+        if(Vector3.Distance(player.transform.position, this.transform.position) < 50 && angle < 60)
         {
             //No se quiere modificar el eje y
             direction.y = 0;

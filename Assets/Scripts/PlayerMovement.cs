@@ -45,6 +45,11 @@ public class PlayerMovement : MonoBehaviour
         // Para mando, INPUT en configuración del editor > Y Axis
         verticalMove = Input.GetAxis("Vertical");
 
+        if (horizontalMove > 0 || verticalMove > 0)
+            Caminando.Play();
+        else
+            Caminando.Pause();
+
         movementInput = new Vector3(horizontalMove, 0, verticalMove) * speed;
 
         lookingAt();
@@ -57,23 +62,23 @@ public class PlayerMovement : MonoBehaviour
         player.Move(movePlayer);
 
         // Reproducir aquí sonido de jugador caminando
-        PlayCaminando();
-        OnTriggerEnter();
+
+        //OnTriggerEnter();
 
 
 
 
     }
 
-    public void PlayCaminando()
+    /*public void PlayCaminando()
     {
-        Caminando.Play();
+       
     }
 
     void OnTriggerEnter()
     {
         Caminando.Play();
-    }
+    }*/
 
     void SetGravity() {
         movePlayer.y = -gravity * Time.deltaTime;
