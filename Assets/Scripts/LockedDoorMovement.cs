@@ -24,8 +24,9 @@ public class LockedDoorMovement : MonoBehaviour
     public static bool hasKey = false;
 
     //Audios
-    public AudioSource AbrirPuerta;
-    public AudioSource CerrarPuerta;
+    //public AudioSource AbrirPuerta;
+    //public AudioSource CerrarPuerta;
+    public AudioSource LockedDoor;
 
     void Start()
     {
@@ -46,30 +47,32 @@ public class LockedDoorMovement : MonoBehaviour
         // Joystick button 2 para botón CUADRADO en el móvil
         if (Input.GetButtonDown("Fire3") && enter)
         {
+            LockedDoor.Play();
             if (hasKey) {
                 open = !open;
                 currentRotationAngle = transform.localEulerAngles.y;
                 openTime = 0;
                 // Reporudcir aquí sonido de puerta 
-                AbrirPuerta.Play();
+               // AbrirPuerta.Play();
             } else {
                 //Reproducir sonido de puerta bloqueada
-                CerrarPuerta.Play();
+                //CerrarPuerta.Play();
             }
         }
 
         // Para abrir con el teclado
         if (Input.GetKeyDown("space") && enter)
         {
+            LockedDoor.Play();
             if (hasKey) {
                 open = !open;
                 currentRotationAngle = transform.localEulerAngles.y;
                 openTime = 0;
                 // Reporudcir aquí sonido de puerta abriéndose
-                AbrirPuerta.Play();
+                //AbrirPuerta.Play();
             } else {
                 //Reproducir sonido de puerta bloqueada
-                CerrarPuerta.Play();
+                //CerrarPuerta.Play();
             }
         }
     }

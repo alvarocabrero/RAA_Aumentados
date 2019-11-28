@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 camRight;
 
     //Audios
-    public AudioSource Caminando;
+    //public AudioSource Caminando;
     
 
     // Start is called before the first frame update
@@ -45,10 +45,11 @@ public class PlayerMovement : MonoBehaviour
         // Para mando, INPUT en configuración del editor > Y Axis
         verticalMove = Input.GetAxis("Vertical");
 
-        if (horizontalMove > 0 || verticalMove > 0)
+        /*if (horizontalMove > 0 || verticalMove > 0)
             Caminando.Play();
         else
             Caminando.Pause();
+        */
 
         movementInput = new Vector3(horizontalMove, 0, verticalMove) * speed;
 
