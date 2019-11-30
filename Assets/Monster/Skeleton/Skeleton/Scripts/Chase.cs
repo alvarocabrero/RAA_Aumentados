@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chase : MonoBehaviour
 {
-    public GameObject player;
+    public Transform player;
     static Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -15,11 +15,11 @@ public class Chase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = player.transform.position - this.transform.position;
+        Vector3 direction = player.position - this.transform.position;
         float angle = Vector3.Angle(direction,this.transform.forward);
 
-        //Si el jugador está a menos de 50 de distancia y en el ángulo de vision del monstruo este se mueve hacia él
-        if(Vector3.Distance(player.transform.position, this.transform.position) < 50 && angle < 60)
+        //Si el jugador está a menos de 800 de distancia y en el ángulo de vision del monstruo este se mueve hacia él
+        if(Vector3.Distance(player.position, this.transform.position) < 800 && angle < 60)
         {
             //No se quiere modificar el eje y
             direction.y = 0;
@@ -29,20 +29,21 @@ public class Chase : MonoBehaviour
                                         Quaternion.LookRotation(direction), 0.1f);
 
             anim.SetBool("isIdle",false);
-            //Si el jugador está a menos de 10 unidades del monstruo este se para y le ataca
-             if(direction.magnitude > 10)
+
+             if(direction.magnitude > 180)
              {
-                this.transform.Translate(0,0,0.07f);
+                this.transform.Translate(0,0,1.5f);
                 anim.SetBool("isWalking",true);
                 anim.SetBool("isAttacking",false);
              }
-             //Si el jugador no está cerca del monstruo este se queda quieto
+             //Si el jugador está a menos de 10 unidades del monstruo este se para y le ataca
              else
              {
                 anim.SetBool("isAttacking",true);
                 anim.SetBool("isWalking",false);
              }
         }
+        //Si el jugador no está cerca del monstruo este se queda quieto
         else
         {
             anim.SetBool("isIdle",true);

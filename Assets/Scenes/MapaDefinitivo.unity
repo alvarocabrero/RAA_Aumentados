@@ -6220,9 +6220,17 @@ PrefabInstance:
     - target: {fileID: 1919063327, guid: d6491f9eb71c6a94c811f8072113c519, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1607296340}
+      objectReference: {fileID: 1607296341}
+    - target: {fileID: 1919063327, guid: d6491f9eb71c6a94c811f8072113c519, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1919063326, guid: d6491f9eb71c6a94c811f8072113c519, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919063328, guid: d6491f9eb71c6a94c811f8072113c519, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17722,7 +17730,7 @@ PrefabInstance:
     - target: {fileID: 1919063327, guid: d6491f9eb71c6a94c811f8072113c519, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1607296340}
+      objectReference: {fileID: 1607296341}
     - target: {fileID: 1919063326, guid: d6491f9eb71c6a94c811f8072113c519, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -47811,7 +47819,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &1102617443484276403
 MeshFilter:
