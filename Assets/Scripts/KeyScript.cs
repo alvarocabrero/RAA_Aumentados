@@ -30,7 +30,8 @@ public class KeyScript : MonoBehaviour
         if ((Input.GetButtonDown("Fire3") || Input.GetKeyDown("space")) && enter)
         {
             LockedDoorMovement.hasKey = true;
-            renderer.enabled = false;
+            //renderer.enabled = false;
+            Destroy(gameObject);
 
             //Sonido de las llaves
             Llaves.Play();

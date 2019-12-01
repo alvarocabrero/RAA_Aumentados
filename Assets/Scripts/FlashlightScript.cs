@@ -50,7 +50,7 @@ public class FlashlightScript : MonoBehaviour {
 		timer += Time.deltaTime;
 		
 if(PickedFlashlight){	
-		if(Input.GetKeyDown(FlashlightKey) && timer >= 0.3f && batteryPercentage > 0) {
+		if((Input.GetKeyDown(FlashlightKey) || Input.GetButtonDown("Fire1")) && timer >= 0.3f && batteryPercentage > 0) {
 			on = !on;
             if(ClickSound){AudioSource.PlayClipAtPoint(ClickSound, myTransform.position, 0.75f);}
 			timer = 0;

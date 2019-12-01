@@ -18,7 +18,7 @@ public class FinalSceneController : MonoBehaviour
         // Para volver a jugar, pulsar "R" o "cuadrado"
         if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("r"))
         {
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("MapaDefinitivo");
         }
     }
 }
