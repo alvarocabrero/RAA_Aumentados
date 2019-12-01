@@ -24,7 +24,7 @@ public class ChaseAbajo : MonoBehaviour
         float angle = Vector3.Angle(direction,this.transform.forward);
 
         //Si el jugador está a menos de 800 de distancia y en el ángulo de vision del monstruo este se mueve hacia él
-        if(Vector3.Distance(player.position, this.transform.position) < 800 && angle < 60)
+        if((Vector3.Distance(player.position, this.transform.position) < 600 && angle < 70) || Vector3.Distance(player.position, this.transform.position) < 250)
         {
             //No se quiere modificar el eje y
             direction.y = 0;
