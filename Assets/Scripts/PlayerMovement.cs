@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public float verticalMove;
     private Vector3 movementInput;
     private Vector3 movePlayer;
-
+  
     public CharacterController player;
 
     public float speed;
@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponent<CharacterController>();	
+        player = GetComponent<CharacterController>();
+        
     }
 
     // Update is called once per frame
@@ -79,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Caminando.Play();
     }*/
+   
 
     void SetGravity() {
         movePlayer.y = -gravity * Time.deltaTime;

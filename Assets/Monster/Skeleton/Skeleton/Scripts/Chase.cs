@@ -1,11 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chase : MonoBehaviour
 {
     public Transform player;
     static Animator anim;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +43,8 @@ public class Chase : MonoBehaviour
              //Si el jugador está a menos de 10 unidades del monstruo este se para y le ataca
              else
              {
+                SceneManager.LoadScene("MapaDefinitivo");
+              
                 anim.SetBool("isAttacking",true);
                 anim.SetBool("isWalking",false);
              }
