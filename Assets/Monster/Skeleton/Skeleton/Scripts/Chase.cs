@@ -8,12 +8,13 @@ public class Chase : MonoBehaviour
 {
     public Transform player;
     static Animator anim;
-
+    private int contador;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        contador = 60;
     }
 
     // Update is called once per frame
@@ -41,10 +42,17 @@ public class Chase : MonoBehaviour
                 anim.SetBool("isAttacking",false);
              }
              //Si el jugador está a menos de 10 unidades del monstruo este se para y le ataca
-             else
+             else 
              {
-                SceneManager.LoadScene("MapaDefinitivo");
-              
+               
+                if (anim.GetBool("isAttacking") && direction.magnitude < 150)
+                {
+                    if (contador == 0)
+                    {
+                        SceneManager.LoadScene("MapaDefinitivo");
+                    }
+                    else { contador--; }
+                }
                 anim.SetBool("isAttacking",true);
                 anim.SetBool("isWalking",false);
              }
